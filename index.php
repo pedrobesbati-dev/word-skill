@@ -70,6 +70,7 @@
             </div>
         </div>
     </div>
-    <button onclick="window.location.href='login.php'">Login</button>
+    <br><br>
+    <button onclick="window.location.href='login.php'" class="login">Login</button>
 </body>
 </html>
