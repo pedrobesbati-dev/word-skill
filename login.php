@@ -30,9 +30,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aba de Login</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
+    <div class="container" align="center">
         <section>
                 <h2>Aba de Login</h2>
             <form method="POST">
@@ -42,7 +43,7 @@
                 <label for="senha">SENHA:<br><br>
                     <input type="password" name="senha"><br><br>                    
                 </label>
-                <button type="submit">LOGAR</button>
+                <button type="submit" id="LOGAR">LOGAR</button>
             </form>
         </section>
     </div>
