@@ -51,3 +51,7 @@ button[name="gostei"] {
 button[name="nao_gostei"] {
     background-color: #e74c3c;
 }
+.login{
+    background-color: blue;
+    border-radius: 10px;
+}
