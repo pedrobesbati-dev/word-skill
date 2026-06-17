@@ -2,31 +2,21 @@
     require "config.php";
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $celular = $_POST['celular'];
-        $comentario = $_POST['comentario'];
-        $reacao = $_POST['reacao'];
+        $celular = $_POST['celular'] ?? '';
+        $comentario = $_POST['comentario'] ?? '';
+        $reacao = '';
+
+        if (isset($_POST['gostei'])) {
+            $reacao = 'Gostei';
+        } elseif (isset($_POST['nao_gostei'])) {
+            $reacao = 'Não Gostei';
+        }
 
         $stmt = $pdo->prepare("INSERT INTO feedback (celular, comentario, reacao) VALUES (?, ?, ?)");
-        $stmt->execute($celular, $comentario, $reacao);
         
-        echo "Feedback enviado!";
+        $stmt->execute([$celular, $comentario, $reacao]);
     }
 ?>
-
-<form method="POST">
-    <select name="celular">
-        <option value="A14 5G">A14 5G</option>
-        <option value="Iphone 12">Iphone 12</option>
-    </select>
-    
-    <input type="text" name="comentario" placeholder="Comentário" required>
-    
-    <label><input type="radio" name="reacao" value="Gostei" checked> Gostei</label>
-    <label><input type="radio" name="reacao" value="Não Gostei"> Não Gostei</label>
-    
-    <button type="submit">Enviar</button>
-</form>
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -48,8 +38,8 @@
             <form method="POST">
                 <input type="hidden" name="celular" value="A14 5G">
                 <input type="text" name="comentario" maxlength="200" placeholder="Digite seu comentário (máx 200 letras)" required>
-                <button type="submit" name="gostei">Gostei</button>
-                <button type="submit" name="nao_gostei">Não Gostei</button>
+                <button type="submit" name="gostei" onclick="return confirm('feedback enviado')">Gostei</button>
+                <button type="submit" name="nao_gostei" onclick="return confirm('feedback enviado')">Não Gostei</button>
             </form>
         </div>
 
@@ -60,8 +50,8 @@
             <form method="POST">
                 <input type="hidden" name="celular" value="Iphone 12">
                 <input type="text" name="comentario" maxlength="200" placeholder="Digite seu comentário (máx 200 letras)" required>
-                <button type="submit" name="gostei">Gostei</button>
-                <button type="submit" name="nao_gostei">Não Gostei</button>
+                <button type="submit" name="gostei" onclick="return confirm('feedback enviado')">Gostei</button>
+                <button type="submit" name="nao_gostei" onclick="return confirm('feedback enviado')">Não Gostei</button>
             </form>
         </div>
 
