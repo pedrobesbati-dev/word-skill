@@ -70,5 +70,6 @@
             </div>
         </div>
     </div>
+    <button onclick="window.location.href='login.php'">Login</button>
 </body>
 </html>
