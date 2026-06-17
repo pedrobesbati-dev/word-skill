@@ -11,3 +11,11 @@ CREATE TABLE feedback (
 );
 
 SELECT * FROM feedback;
+
+CREATE TABLE usuarios(
+	id INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(100),
+    senha VARCHAR(100)
+);
+
+INSERT INTO usuarios (nome, senha) VALUES ('pedro', 'pedro'); 
