@@ -25,36 +25,50 @@
     <title>Aba de celulares</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>  
-    <div class="aba_superior">
-        <h2>FEEDBack Cell</h2>
-    </div>
+<body>
+      
+    <h2>FEEDBack Cell</h2>
+
     <div class="container">
-
-        <div class="celulares">
-            <section>
-                <h2>A14 5G</h2>
-            </section>
-            <form method="POST">
-                <input type="hidden" name="celular" value="A14 5G">
-                <input type="text" name="comentario" maxlength="200" placeholder="Digite seu comentário (máx 200 letras)" required>
-                <button type="submit" name="gostei" onclick="return confirm('feedback enviado')">Gostei</button>
-                <button type="submit" name="nao_gostei" onclick="return confirm('feedback enviado')">Não Gostei</button>
-            </form>
+        <h2>O foco do nosso site não é ser uma vitrine mas sim podermos estar recebendo os feedbacks dos usuários de cada celular</h2>
+            <div class="celulares-wrapper">
+            <div class="celulares">
+                <section>
+                    <h2>A14 5G</h2>
+                    <img src="A14 5G.webp">
+                </section>
+                <form method="POST">
+                    <input type="hidden" name="celular" value="A14 5G">
+                    <input type="text" name="comentario" maxlength="200" placeholder="Digite seu comentário (máx 200 letras)" required><br>
+                    <button type="submit" name="gostei" onclick="return confirm('feedback enviado')">Gostei</button><br>
+                    <button type="submit" name="nao_gostei" onclick="return confirm('feedback enviado')">Não Gostei</button><br><br>
+                </form>
+            </div>
+            <div class="celulares">
+                <section>
+                    <h2>Iphone 12</h2>
+                    <img src="Iphone 12.webp">
+                </section>
+                <form method="POST">
+                    <input type="hidden" name="celular" value="Iphone 12">
+                    <input type="text" name="comentario" maxlength="200" placeholder="Digite seu comentário (máx 200 letras)" required><br>
+                    <button type="submit" name="gostei" onclick="return confirm('feedback enviado')">Gostei</button><br>
+                    <button type="submit" name="nao_gostei" onclick="return confirm('feedback enviado')">Não Gostei</button><br><br>
+                </form>
+            </div>
+            <div class="celulares">
+                <section>
+                    <h2>Motorola edge 60</h2>
+                    <img src="Motorola edge 60.webp">
+                </section>
+                <form method="POST">
+                    <input type="hidden" name="celular" value="Iphone 12">
+                    <input type="text" name="comentario" maxlength="200" placeholder="Digite seu comentário (máx 200 letras)" required><br>
+                    <button type="submit" name="gostei" onclick="return confirm('feedback enviado')">Gostei</button><br>
+                    <button type="submit" name="nao_gostei" onclick="return confirm('feedback enviado')">Não Gostei</button><br><br>
+                </form>
+            </div>
         </div>
-
-        <div class="celulares">
-            <section>
-                <h2>Iphone 12</h2>
-            </section>
-            <form method="POST">
-                <input type="hidden" name="celular" value="Iphone 12">
-                <input type="text" name="comentario" maxlength="200" placeholder="Digite seu comentário (máx 200 letras)" required>
-                <button type="submit" name="gostei" onclick="return confirm('feedback enviado')">Gostei</button>
-                <button type="submit" name="nao_gostei" onclick="return confirm('feedback enviado')">Não Gostei</button>
-            </form>
-        </div>
-
     </div>
 </body>
 </html>
