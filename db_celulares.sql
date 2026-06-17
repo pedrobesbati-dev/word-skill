@@ -9,3 +9,5 @@ CREATE TABLE feedback (
     reacao VARCHAR(20) NOT NULL,
     data_envio TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
+SELECT * FROM feedback;
